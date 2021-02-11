@@ -24,6 +24,8 @@ dependencies:
   flutter:
     sdk: flutter
   flutter_svg: ^0.18.0
+  datetime_picker_formfield: ^1.0.0
+  flutter_dropdown: ^0.0.8
 
 
 

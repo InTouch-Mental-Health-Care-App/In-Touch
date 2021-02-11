@@ -29,17 +29,7 @@ class LoginScreen extends StatelessWidget {
                   width: 150,
                 ),
                 SizedBox(
-                  height: 20,
-                ),
-                Text(
-                  'Email',
-                  style: TextStyle(
-                      fontSize: 20,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.purple[700]),
-                ),
-                SizedBox(
-                  height: 10,
+                  height: 40,
                 ),
                 Container(
                   width: MediaQuery.of(context).size.width * 0.9,
@@ -48,7 +38,8 @@ class LoginScreen extends StatelessWidget {
                     keyboardType: TextInputType.emailAddress,
                     decoration: InputDecoration(
                       contentPadding: EdgeInsets.all(10),
-                      hintText: "Enter your Email",
+                      prefixIcon: Icon(Icons.mail, color: Colors.purple[700],),
+                      hintText: "Email",
                       border: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(15),
                       ),
@@ -61,17 +52,7 @@ class LoginScreen extends StatelessWidget {
                   ),
                 ),
                 SizedBox(
-                  height: 10,
-                ),
-                Text(
-                  'Password',
-                  style: TextStyle(
-                      fontSize: 20,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.purple[700]),
-                ),
-                SizedBox(
-                  height: 10,
+                  height: 15,
                 ),
                 Container(
                   width: MediaQuery.of(context).size.width * 0.9,
@@ -80,7 +61,8 @@ class LoginScreen extends StatelessWidget {
                     obscureText: true,
                     decoration: InputDecoration(
                       contentPadding: EdgeInsets.all(10),
-                      hintText: "Enter your Password",
+                     prefixIcon: Icon(Icons.lock, color: Colors.purple[700],),
+                     hintText: "Password",
                       border: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(15),
                       ),
@@ -101,8 +83,8 @@ class LoginScreen extends StatelessWidget {
                   child: RaisedButton(
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(15.0),
-                        side:
-                            BorderSide(color: Colors.deepPurpleAccent[400], width: 3.0)),
+                        side: BorderSide(
+                            color: Colors.deepPurpleAccent[400], width: 1.0)),
                     color: Colors.purple[900],
                     onPressed: () {},
                     child: Text(
@@ -127,12 +109,15 @@ class LoginScreen extends StatelessWidget {
                 SizedBox(
                   height: 5,
                 ),
-                Text(
-                  'Create An Account',
-                  style: TextStyle(
-                      fontSize: 17,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.purple[700]),
+                GestureDetector(
+                  onTap: () => Navigator.pushNamed(context, '/CreateAccount'),
+                  child: Text(
+                    'Create An Account',
+                    style: TextStyle(
+                        fontSize: 17,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.purple[700]),
+                  ),
                 ),
               ],
             ),
