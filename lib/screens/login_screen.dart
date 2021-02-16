@@ -86,7 +86,9 @@ class LoginScreen extends StatelessWidget {
                         side: BorderSide(
                             color: Colors.deepPurpleAccent[400], width: 1.0)),
                     color: Colors.purple[900],
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.pushNamed(context, "/Home");
+                    },
                     child: Text(
                       "Log In",
                       style: TextStyle(color: Colors.white, fontSize: 18),

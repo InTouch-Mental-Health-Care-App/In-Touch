@@ -18,6 +18,7 @@ class MyApp extends StatelessWidget {
           '/': (context) => LoginScreen(),
           '/ForgotPassword' : (context) => ForgotPasswordScreen(),
           '/CreateAccount' : (context) => SignUpScreen(),
+          '/Home' : (context) => HomeScreen(),
         },
         );
   }
